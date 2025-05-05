@@ -1,16 +1,26 @@
 <?php
 
-class HomeController
+namespace App\Controller;
+
+use Mini\View\ViewRenderer;
+use Mini\FlashMessage\FlashMessage;
+use Mini\Controller\AbstractController;
+
+class HomeController extends AbstractController
 {
     private $name;
-    public function __construct()
+    public function __construct(ViewRenderer $viewRenderer, FlashMessage $flashMessage)
     {
-        $this->name = 'HomeController';
+        parent::__construct($viewRenderer, $flashMessage);
+
+        $this->name = 'Home';
     }
 
 
     public function index()
     {
-        return 'Hello je suis le ' . $this->name . ' dans HomeController';
+        return $this->viewRenderer->render('home.phtml', [
+            'title' => 'Bienvenue sur votre nouveau projet MVC-Starter'
+        ]);
     }
 }
