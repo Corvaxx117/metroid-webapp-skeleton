@@ -16,7 +16,10 @@
         }
     ],
     "scripts": {
-    "setup-env": "@php -r \"if (!file_exists('.env')) copy('.env.example', '.env');\""
+    "setup-env": "@php -r \"if (!file_exists('.env')) copy('.env.example', '.env');\"",
+    "post-create-project-cmd": [
+        "@setup-env"
+    ]
     },
     "autoload": {
         "psr-4": {
