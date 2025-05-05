@@ -15,6 +15,9 @@
             "url": "https://github.com/Corvaxx117/starter-webapp"
         }
     ],
+    "scripts": {
+    "setup-env": "@php -r \"if (!file_exists('.env')) copy('.env.example', '.env');\""
+    },
     "autoload": {
         "psr-4": {
             "App\\": "src/"
