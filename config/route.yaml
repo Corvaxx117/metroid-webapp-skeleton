@@ -5,6 +5,10 @@
 
 routes:
   # Exemple de route :
-#  "/auth/registrationForm":
-#    method: GET
-#    callable: Mini\Controller\AuthController::displayRegistrationForm
+  "/":
+    method: GET
+    callable: App\Controller\HomeController::index
+
+  # "/news/:id":
+  #   method: GET
+  #   callable: App\Controller\NewsController::show
