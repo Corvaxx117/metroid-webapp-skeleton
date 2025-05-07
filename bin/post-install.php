@@ -22,7 +22,7 @@ $logo = <<<ASCII
   
 ༼ つ ಥ_ಥ ༽つ    ༼ つ ಥ_ಥ ༽つ    ༼ つ ಥ_ಥ ༽つ    ༼ つ ಥ_ಥ ༽つ
 
-      {$orange}M   i   n   i{$reset}
+      {$orange}M  e   t   r   o   i   d   {$reset}
 ASCII;
 
 echo $logo . "\n";
