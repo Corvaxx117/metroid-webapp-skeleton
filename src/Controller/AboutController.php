@@ -2,11 +2,11 @@
 
 namespace App\Controller;
 
-use Mini\Controller\AbstractController;
-use Mini\Http\Request;
-use Mini\Http\Response;
-use Mini\View\ViewRenderer;
-use Mini\FlashMessage\FlashMessage;
+use Metroid\Controller\AbstractController;
+use Metroid\Http\Request;
+use Metroid\Http\Response;
+use Metroid\View\ViewRenderer;
+use Metroid\FlashMessage\FlashMessage;
 
 class AboutController extends AbstractController
 {

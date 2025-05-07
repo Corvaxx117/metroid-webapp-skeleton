@@ -4,7 +4,7 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/../config/config.php';
 
-use Mini\Launcher;
+use Metroid\Launcher;
 
 $basePath = dirname(__DIR__) . '/';
 $routesFile = $basePath . 'config/route.yaml';

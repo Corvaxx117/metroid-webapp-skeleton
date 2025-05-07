@@ -1,6 +1,6 @@
 {
     "name": "corvaxx/starter-webapp-skeleton",
-    "description": "Projet de base pour démarrer avec corvaxx/starter-webapp.",
+    "description": "Projet de base pour démarrer avec Metroid.",
     "type": "project",
     "require": {
         "php": ">=8.0",
