@@ -1,5 +1,5 @@
 {
-    "name": "corvaxx/starter-webapp-skeleton",
+    "name": "corvaxx/metroid-webapp-skeleton",
     "description": "Projet de base pour démarrer avec Metroid.",
     "type": "project",
     "require": {
@@ -12,7 +12,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/Corvaxx117/starter-webapp"
+            "url": "https://github.com/Corvaxx117/metroid-webapp"
         }
     ],
     "autoload": {
