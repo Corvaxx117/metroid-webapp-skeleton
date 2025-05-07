@@ -1,3 +1,84 @@
-body {
-    background-color: red;
+
+:root {
+    --headerColor: #1e1e2f;
+    --textColor: #f8f8f2;
+    --accentColor: #c05f3e;
+    --hoverColor: #f6ac8e;
 }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--textColor);
+    background-color: #121212;
+    margin: 0;
+    padding: 2rem;
+    line-height: 1.6;
+}
+
+h2 {
+    color: var(--accentColor);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px black;
+}
+
+ul li {
+    padding: 0.4rem 0;
+    list-style: none;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+ul li::before {
+    content: '➤';
+    margin-right: 0.5rem;
+    color: var(--accentColor);
+    transition: transform 0.3s ease;
+}
+
+ul li:hover::before {
+    transform: translateX(5px);
+}
+
+.hover-effect {
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), var(--headerColor), rgba(0, 0, 0, 0.2));
+    background-color: var(--headerColor);
+    transition: background 0.2s ease;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.hover-effect:hover {
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(83, 80, 102, 0.688), var(--headerColor));
+}
+
+.hover-link {
+    position: relative;
+    color: var(--textColor);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.hover-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--hoverColor);
+    transition: width 0.3s ease;
+}
+
+.hover-link:hover {
+    color: var(--hoverColor);
+}
+
+.hover-link:hover::after {
+    width: 100%;
+}
+
