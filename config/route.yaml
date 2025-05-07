@@ -9,6 +9,10 @@ routes:
     method: GET
     callable: App\Controller\HomeController::index
 
+  /a-propos:
+    method: GET
+    callable: App\Controller\AboutController::index
+
   # "/news/:id":
   #   method: GET
   #   callable: App\Controller\NewsController::show

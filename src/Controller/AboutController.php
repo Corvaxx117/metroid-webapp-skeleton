@@ -2,13 +2,13 @@
 
 namespace App\Controller;
 
-use Mini\View\ViewRenderer;
+use Mini\Controller\AbstractController;
 use Mini\Http\Request;
 use Mini\Http\Response;
+use Mini\View\ViewRenderer;
 use Mini\FlashMessage\FlashMessage;
-use Mini\Controller\AbstractController;
 
-class HomeController extends AbstractController
+class AboutController extends AbstractController
 {
     public function __construct(ViewRenderer $viewRenderer, FlashMessage $flashMessage)
     {
@@ -17,8 +17,8 @@ class HomeController extends AbstractController
 
     public function index(Request $request): Response
     {
-        $html = $this->viewRenderer->render('home.phtml', [
-            'title' => 'Bienvenue sur votre nouveau projet MVC-Starter'
+        $html = $this->viewRenderer->render('about.phtml', [
+            'title' => 'À propos de ce projet',
         ], 200, true);
 
         return (new Response())
