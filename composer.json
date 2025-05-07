@@ -21,9 +21,9 @@
         }
     },
     "scripts": {
-    "setup-env": "@php -r \"if (!file_exists('.env')) copy('.env.example', '.env');\"",
     "post-create-project-cmd": [
-        "@setup-env"
+        "@setup-env",
+        "@php bin/post-install.php"
     ]
     },
     "minimum-stability": "dev",
