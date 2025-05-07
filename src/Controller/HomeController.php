@@ -18,7 +18,7 @@ class HomeController extends AbstractController
     public function index(Request $request): Response
     {
         $html = $this->viewRenderer->render('home.phtml', [
-            'title' => 'Bienvenue sur votre nouveau projet MVC-Starter'
+            'title' => 'Bienvenue sur votre nouveau projet Metroid'
         ], 200, true);
 
         return (new Response())
