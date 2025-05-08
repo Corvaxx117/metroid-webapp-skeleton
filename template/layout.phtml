@@ -12,7 +12,7 @@ $this->initSession();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Starter webapp Corvaxx">
+    <meta name="description" content="Metroid webapp Corvaxx">
     <title>New | <?= isset($title) ? $this->clean($title, false) : 'Bienvenue' ?></title>
 
     <!-- Google Fonts + FontAwesome -->
@@ -21,6 +21,8 @@ $this->initSession();
 
     <!-- Style principal -->
     <link rel="stylesheet" href="<?= $this->url('../assets/CSS/style.css') ?>">
+    <!-- Style des messages flash -->
+    <link rel="stylesheet" href="<?= $this->url('../assets/CSS/flashMessage.css') ?>">
 </head>
 
 <body>
@@ -39,6 +41,13 @@ $this->initSession();
                 <a class="hover-link" href="<?= $this->url('/auth/connection') ?>">Connexion</a>
                 <a class="hover-link" href="<?= $this->url('/auth/registration') ?>">Inscription</a>
             <?php endif ?> -->
+            <a href="<?= $this->url('/messagerie') ?>" class="hover-link">
+                <i class="fa-regular fa-message"></i> Messagerie <span class="badge">1</span>
+            </a>
+            <a href="<?= $this->url('/users/profile') ?>" class="hover-link">
+                <i class="fa-regular fa-user"></i> Mon compte
+            </a>
+            <a href="<?= $this->url('/auth/connection') ?>" class="hover-link">Connexion</a>
         </nav>
         <h1 class="hover-effect" style="text-align:center;">🚀 <?= $title ?? ' M E T R O I D ' ?> 🚀</h1>
     </header>

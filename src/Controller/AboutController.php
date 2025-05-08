@@ -20,6 +20,8 @@ class AboutController extends AbstractController
         $html = $this->viewRenderer->render('about.phtml', [
             'title' => 'À propos de ce projet',
         ], 200, true);
+        $this->flashMessage->add('warning', 'Ceci est un message flash de test');
+
 
         return (new Response())
             ->setContent($html ?? 'Erreur de rendu du template')
