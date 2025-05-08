@@ -6,13 +6,34 @@
  */
 ?>
 
-<h2>Bienvenue sur votre mini framework</h2>
+<section class="hero-section hover-effect">
+    <div class="hero-content">
+        <h1>Bienvenue sur <span class="brand">Metroid</span> Framework</h1>
+        <p class="lead">
+            Un mini-framework PHP MVC moderne, inspiré de Symfony, pensé pour la simplicité et l'efficacité.
+        </p>
+        <a href="<?= $this->url('/aPropos') ?>" class="btn-primary">En savoir plus</a>
+    </div>
+</section>
 
-<p>Voici une page d’accueil fonctionnelle, intégrée via le layout principal.</p>
+<section class="features hover-effect">
+    <h2>🔧 Fonctionnalités clés</h2>
+    <ul class="feature-list">
+        <li>🔹 Architecture MVC légère</li>
+        <li>🔹 Routage dynamique avec YAML</li>
+        <li>🔹 Contrôleurs typés (PHP 8+)</li>
+        <li>🔹 Objets <code>Request</code> & <code>Response</code></li>
+        <li>🔹 Vues avec layout global personnalisable</li>
+        <li>🔹 Messages flash avec sessions ou fallback</li>
+        <li>🔹 Prêt pour les tests unitaires</li>
+    </ul>
+</section>
 
-<ul>
-    <li>Structure MVC légère</li>
-    <li>Routage avec YAML</li>
-    <li>Contrôleurs typés et modernes</li>
-    <li>Gestion des vues avec layout global</li>
-</ul>
+<section class="cta-section">
+    <h2>🚀 Lancez-vous</h2>
+    <p>
+        Créez votre projet en un clin d’œil avec :
+    </p>
+    <pre><code>composer create-project corvaxx/metroid-webapp-skeleton nom-du-projet</code></pre>
+    <a href="<?= $this->url('/articles') ?>" class="btn-secondary">Explorer les articles</a>
+</section>
