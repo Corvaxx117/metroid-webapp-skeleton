@@ -17,12 +17,8 @@ class HomeController extends AbstractController
 
     public function index(Request $request): Response
     {
-        $html = $this->viewRenderer->render('home.phtml', [
+        return $this->viewRenderer->render('home.phtml', [
             'title' => 'Bienvenue sur votre nouveau projet Metroid'
-        ], 200, true);
-
-        return (new Response())
-            ->setContent($html ?? 'Erreur de rendu du template')
-            ->setStatusCode(200);
+        ], 200);
     }
 }
