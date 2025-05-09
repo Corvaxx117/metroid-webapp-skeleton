@@ -13,9 +13,21 @@ routes:
     method: GET
     callable: App\Controller\AboutController::index
 
-  "/registration":
+  "/auth/registration":
     method: GET|POST
-    callable: App\Controller\RegisterController::register
+    callable: App\Controller\AuthController::register
+
+  "/auth/login":
+    method: GET|POST
+    callable: App\Controller\AuthController::login
+
+  "/auth/logout":
+    method: GET
+    callable: App\Controller\AuthController::logout
+
+  "/account":
+    method: GET
+    callable: App\Controller\AccountController::show
 
   # "/news/:id":
   #   method: GET

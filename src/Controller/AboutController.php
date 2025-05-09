@@ -17,14 +17,10 @@ class AboutController extends AbstractController
 
     public function index(Request $request): Response
     {
-        $html = $this->viewRenderer->render('about.phtml', [
-            'title' => 'À propos de ce projet',
-        ], 200, true);
         $this->flashMessage->add('warning', 'Ceci est un message flash de test');
 
-
-        return (new Response())
-            ->setContent($html ?? 'Erreur de rendu du template')
-            ->setStatusCode(200);
+        return $this->viewRenderer->render('about.phtml', [
+            'title' => 'À propos de ce projet',
+        ], 200);
     }
 }

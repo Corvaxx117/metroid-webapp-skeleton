@@ -7,7 +7,7 @@
         "ext-pdo": "*",
         "ext-mbstring": "*",
         "symfony/dotenv": "^6.0",
-        "corvaxx/metroid-webapp": "dev-main"
+        "corvaxx/metroid-webapp": "^1.0"
     },
     "repositories": [
         {

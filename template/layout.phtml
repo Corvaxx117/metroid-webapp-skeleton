@@ -33,14 +33,14 @@ $this->initSession();
             <a class="hover-link" href="<?= $this->url('/a-propos') ?>">À propos</a>
             <!-- <?php if ($this->isAdmin()): ?>
                 <a class="hover-link" href="<?= $this->url('/admin') ?>">Admin</a>
-            <?php endif ?>
-            <?php if ($this->isAuthenticated()): ?>
-                <a class="hover-link" href="<?= $this->url('/users/profile') ?>">Profil</a>
-                <a class="hover-link" href="<?= $this->url('/disconnect') ?>" onclick="return confirm('Déconnexion ?')">Déconnexion</a>
-            <?php else: ?>
-                <a class="hover-link" href="<?= $this->url('/connection') ?>">Connexion</a>
-                <a class="hover-link" href="<?= $this->url('/registration') ?>">Inscription</a>
             <?php endif ?> -->
+            <?php if ($this->isAuthenticated()): ?>
+                <a class="hover-link" href="<?= $this->url('/account') ?>">Profil</a>
+                <a class="hover-link" href="<?= $this->url('/auth/logout') ?>" onclick="return confirm('Déconnexion ?')">Déconnexion</a>
+            <?php else: ?>
+                <a class="hover-link" href="<?= $this->url('/auth/login') ?>">Connexion</a>
+                <a class="hover-link" href="<?= $this->url('/auth/registration') ?>">Inscription</a>
+            <?php endif ?>
             <a href="<?= $this->url('/messagerie') ?>" class="hover-link">
                 <i class="fa-regular fa-message"></i> Messagerie <span class="badge">1</span>
             </a>

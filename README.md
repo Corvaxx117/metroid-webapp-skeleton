@@ -39,6 +39,7 @@ composer create-project corvaxx/metroid-webapp-skeleton mon-projet \
 
 Une fois le projet installé
 
+- Lire le [`README.md`](https://github.com/Corvaxx117/metroid-webapp) de metroid-webapp pour plus de details
 - Dans le fichier config.php, remplacez l'adresse APP_BASE_URL
 - Ajoutez un fichier .htaccess dans le dossier public du squelette
 - Supprimez le dossier bin/ à la racine du squelette
