@@ -41,3 +41,4 @@ Une fois le projet installé
 
 - Dans le fichier config.php, remplacez l'adresse APP_BASE_URL
 - Ajoutez un fichier .htaccess dans le dossier public du squelette
+- Supprimez le dossier bin/ à la racine du squelette

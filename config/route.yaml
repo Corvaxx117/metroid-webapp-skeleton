@@ -13,6 +13,10 @@ routes:
     method: GET
     callable: App\Controller\AboutController::index
 
+  "/registration":
+    method: GET|POST
+    callable: App\Controller\RegisterController::register
+
   # "/news/:id":
   #   method: GET
   #   callable: App\Controller\NewsController::show
