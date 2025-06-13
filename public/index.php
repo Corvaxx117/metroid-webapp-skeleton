@@ -1,5 +1,9 @@
 <?php
 
+ini_set("log_errors", 1);
+ini_set("error_log", dirname(__DIR__) .  "/log/errors.log");
+error_reporting(E_ALL);
+
 // Charge les dépendances via l’autoloader
 require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/../config/config.php';
