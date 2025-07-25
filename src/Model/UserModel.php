@@ -2,10 +2,11 @@
 
 namespace App\Model;
 
+use App\Security\User;
 use Metroid\Database\Model\TableAbstractModel;
 
 /**
- * Classe qui gère les utilisateurs.
+ * Classe modèle exemple qui gère les utilisateurs.
  */
 class UserModel extends TableAbstractModel
 {
@@ -22,12 +23,14 @@ class UserModel extends TableAbstractModel
     }
 
     /**
-     * Récupère tous les utilisateurs.
-     * @return array : un tableau d'objets User.
+     * Renvoie l'utilisateur sous forme d'objet User à partir de son ID.
+     * @param int $id L'identifiant de l'utilisateur
+     * @return User L'utilisateur trouvé
      */
-    public function findAllUsers(): array
+    public function getUserObjectById(int $id): User
     {
-        return parent::findAll();
+        $data = $this->findUserById($id);
+        return new User($data['id'], $data['name'], $data['email'], $data['is_admin'], $data['avatar']);
     }
 
     /**
